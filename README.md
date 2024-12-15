@@ -4,7 +4,9 @@
 
 Effortlessly configure signing for Android builds in Expo projects during the prebuild process.
 
-### How It Works
+---
+
+## How It Works
 
 - **Step 1**: Updates the `gradle.properties` file to include signing configurations.
 - **Step 2**: Modifies the `build.gradle` file to switch from debug signing to release signing.
@@ -13,7 +15,7 @@ Effortlessly configure signing for Android builds in Expo projects during the pr
 
 ---
 
-### Resources
+## Resources
 
 - [Expo Local App Production Guide](https://docs.expo.dev/guides/local-app-production/#android)
 - [Continuous Native Generation in Expo](https://docs.expo.dev/workflow/continuous-native-generation/)
@@ -34,10 +36,10 @@ Effortlessly configure signing for Android builds in Expo projects during the pr
 
 Before using `expo-signed`, generate a private signing key and follow these steps:
 
-1. **Generate a Key**:\
+1. **Generate a Key**:  
    Use `keytool` to create a private signing key. Follow the instructions provided in the [React Native documentation on signed APKs](https://reactnative.dev/docs/signed-apk-android#generating-an-upload-key).
 
-2. **Place the Keystore File**:\
+2. **Place the Keystore File**:  
    Add the generated keystore file to your project directory.
 
 ---
@@ -46,11 +48,18 @@ Before using `expo-signed`, generate a private signing key and follow these step
 
 To install and configure the plugin:
 
-### 1. Define the Keystore Location
+### 1. Install the Plugin
+
+Run the following command to install the plugin in your Expo project:
+```bash
+npx expo install expo-signed
+```
+
+### 2. Define the Keystore Location
 
 - Place the `.keystore` file in your project, and set the folder path (`keystorePath`) and file name (`store_file.value`) in the configuration.
 
-### 2. Update `app.json`
+### 3. Update `app.json`
 
 Add the plugin configuration to your `app.json` as follows:
 
